@@ -1,0 +1,8 @@
+.sidebar{
+    flex: 3;
+    height: cal (100vh-50px);
+}
+.sidebarwrapper{
+    padding: 20px;
+    background-color: aquamarine;
+}
