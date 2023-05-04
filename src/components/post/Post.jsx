@@ -1,7 +1,14 @@
 import "./post.css"
 import {Users} from "../../DummyData"
+import { useState } from "react"
 
 export default function Post({Post}) {
+    const [like,setLike] = useState(Post.like)
+    const [isLiked,setIsLike] = useState(false)
+    const likeHandler = ()=>{
+        setLike (isLiked ? like-1 : like+1)
+        setIsLike(!isLiked)
+    }
    
   return (
     <div className="post">
@@ -22,9 +29,9 @@ export default function Post({Post}) {
         </div>
         <div className="postbottom">
             <div className="postbottomleft">
-                <img src="/assets/like.png"  className="likeicon"></img>
-                <img src="/assets/heart.png" className="likeicon"></img>
-                <span className="postlikecounter"> {Post.like} people like it</span>
+                <img src="/assets/like.png"  className="likeicon" onClick={likeHandler}></img>
+                <img src="/assets/heart.png" className="likeicon" onClick={likeHandler}></img>
+                <span className="postlikecounter"> {like} people like it</span>
             </div>
             <div className="postbottomright">
                 <span className="postcommenttext"> {Post.comment} comments</span>

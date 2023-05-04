@@ -5,59 +5,49 @@
     position: sticky;
     top: 50px;
     
+    
 }
-
 ::-webkit-scrollbar{
-    width: 3px;
+    width: 5px;
 }
 ::-webkit-scrollbar-track{
    background-color: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(179, 179, 179);
+    background-color: gray;
 }
-.sidebarwrapper{
-    padding: 20px;
-    
+
+.sidebarWrapper{
+    padding: 20px ;
 }
-.sidebarlist li{
-  
-    list-style: none;
-    margin-bottom: 25px;
-}
-.sidebarlistitem{
-    display: flex;
-    align-items: center;
+.sidebarList{
+  margin: 0;
+  padding: 0;
+  list-style: none;
    
 }
-.sidebarlistitemtext{
+.sidebarListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+   
+}
+.sidebarListItemText{
     margin-left: 20px;
 }
-.sidebarbutton{
+.sidebarButton{
     width: 150px;
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: 500;
 }
-.sidebarhr{
+.sidebarHr{
     margin: 10px 0;
 }
-.sidebarfriendlist{
+.sidebarFriendList{
     margin: 0;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     padding: 0;
     list-style: none;
-}
-.sidebarfriend{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-.sidebarfriendimg{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
 }

@@ -1,17 +1,7 @@
 import "./sidebar.css";
-import {
-  RssFeed,
-  Chat,
-  PlayCircleFilledOutlined,
-  Group,
-  Bookmark,
-  HelpOutline,
-  WorkOutline,
-  Event,
-  School,
-} from "@material-ui/icons";
-// import { Users } from "../../dummyData";
-// import CloseFriend from "../closeFriend/CloseFriend";
+import {Users} from "../../DummyData"
+import CloseFriend from "../closeFriend/CloseFriend";
+
 
 export default function Sidebar() {
   return (
@@ -19,46 +9,46 @@ export default function Sidebar() {
       <div className="sidebarWrapper">
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <RssFeed className="sidebarIcon" />
+          <i class="fa-solid fa-rss"></i>
             <span className="sidebarListItemText">Feed</span>
           </li>
           <li className="sidebarListItem">
-            <Chat className="sidebarIcon" />
+          <i class="fa-solid fa-message"></i>
             <span className="sidebarListItemText">Chats</span>
           </li>
           <li className="sidebarListItem">
-            <PlayCircleFilledOutlined className="sidebarIcon" />
+          <i class="fa-solid fa-play"></i>
             <span className="sidebarListItemText">Videos</span>
           </li>
           <li className="sidebarListItem">
-            <Group className="sidebarIcon" />
+          <i class="fa-solid fa-user-group"></i>
             <span className="sidebarListItemText">Groups</span>
           </li>
           <li className="sidebarListItem">
-            <Bookmark className="sidebarIcon" />
+          <i class="fa-solid fa-bookmark"></i>
             <span className="sidebarListItemText">Bookmarks</span>
           </li>
           <li className="sidebarListItem">
-            <HelpOutline className="sidebarIcon" />
+          <i class="fa-sharp fa-regular fa-question"></i>
             <span className="sidebarListItemText">Questions</span>
           </li>
+          
           <li className="sidebarListItem">
-            <WorkOutline className="sidebarIcon" />
-            <span className="sidebarListItemText">Jobs</span>
-          </li>
-          <li className="sidebarListItem">
-            <Event className="sidebarIcon" />
+          <i class="fa-solid fa-calendar"></i>
             <span className="sidebarListItemText">Events</span>
           </li>
           <li className="sidebarListItem">
-            <School className="sidebarIcon" />
+          <i class="fa-sharp fa-solid fa-graduation-cap"></i>
             <span className="sidebarListItemText">Courses</span>
           </li>
         </ul>
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-       
+            {Users.map(u=>(
+              <CloseFriend key={u.id } user={u}/>
+            ))}
+           
         </ul>
       </div>
     </div>
